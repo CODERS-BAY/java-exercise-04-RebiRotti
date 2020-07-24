@@ -20,7 +20,7 @@ public class Calculator {
         System.out.println(x + " " + y);
         return x + y;
     }
-    private static double additionFloat(double x, double y) {
+    private static double additionDouble(double x, double y) {
         System.out.println(x + " " + y);
         return x + y;
     }
@@ -30,7 +30,7 @@ public class Calculator {
         System.out.println(x + " " + y);
         return x - y;
     }
-    private static double subtractionFloat(double x, double y) {
+    private static double subtractionDouble(double x, double y) {
         System.out.println(x + " " + y);
         return x - y;
     }
@@ -41,7 +41,7 @@ public class Calculator {
         System.out.println(x + " " + y);
         return x / y;
     }
-    private static double divideFloat(double x, double y) {
+    private static double divideDouble(double x, double y) {
         System.out.println(x + " " + y);
         return x / y;
     }
@@ -51,7 +51,7 @@ public class Calculator {
         System.out.println(x + " " + y);
         return x % y;
     }
-    private static double moduloFloat(double x, double y) {
+    private static double moduloDouble(double x, double y) {
         System.out.println(x + " " + y);
         return x % y;
     }
@@ -61,7 +61,7 @@ public class Calculator {
         System.out.println(x + " " + y);
         return sqrt(x^2 + y^2 ); //
     }
-    private static double pythagorasFloat(double x, double y) {
+    private static double pythagorasDouble(double x, double y) {
         System.out.println(x + " " + y);
         return sqrt(x^2 + y^2 );
     }*/
@@ -91,12 +91,12 @@ public class Calculator {
         int helperInt = 0;
         int firstNumberInt = 0;
         int secondNumberInt = 0;
-        double firstNumberFloat = 0;
-        double secondNumberFloat = 0;
+        double firstNumberDouble = 0;
+        double secondNumberDouble = 0;
 
         do {
             System.out.println("""
-                    Would you like to make floating point calculations?
+                    Would you like to make Floating point calculations?
                     type y for yes and anything else for integer calculations
                     """);
             char choice = theInput.next().charAt(0);
@@ -104,9 +104,9 @@ public class Calculator {
 
             if(choice == 'y') {
                 System.out.println("Type in the first number: ");
-                firstNumberFloat = theInput.nextDouble();
+                firstNumberDouble = theInput.nextDouble();
                 System.out.println("Type in the second number: ");
-                secondNumberFloat = theInput.nextDouble();
+                secondNumberDouble = theInput.nextDouble();
             } else {
                 System.out.println("Type in the first number: ");
                 firstNumberInt = theInput.nextInt();
@@ -120,20 +120,20 @@ public class Calculator {
 
            switch(operation) {
                case 1:
-                   System.out.println("Calculation " + firstNumberFloat + " + " + secondNumberFloat);
-                   System.out.println("The solution is = " + additionFloat(firstNumberFloat, secondNumberFloat));
+                   System.out.println("Calculation " + firstNumberDouble + " + " + secondNumberDouble);
+                   System.out.println("The solution is = " + additionDouble(firstNumberDouble, secondNumberDouble));
                    break;
                case 2:
-                   System.out.println("Calculation " + firstNumberFloat + " - " + secondNumberFloat);
-                   System.out.println("The solution is = " + subtractionFloat(firstNumberFloat, secondNumberFloat));
+                   System.out.println("Calculation " + firstNumberDouble + " - " + secondNumberDouble);
+                   System.out.println("The solution is = " + subtractionDouble(firstNumberDouble, secondNumberDouble));
                    break;
                case 3:
-                   System.out.println("Calculation " + firstNumberFloat + " / " + secondNumberFloat);
-                   System.out.println("The solution is = " + divideFloat(firstNumberFloat, secondNumberFloat));
+                   System.out.println("Calculation " + firstNumberDouble + " / " + secondNumberDouble);
+                   System.out.println("The solution is = " + divideDouble(firstNumberDouble, secondNumberDouble));
                    break;
                case 4:
-                   System.out.println("Calculation " + firstNumberFloat + " % " + secondNumberFloat);
-                   System.out.println("The solution is = " + moduloFloat(firstNumberFloat, secondNumberFloat));
+                   System.out.println("Calculation " + firstNumberDouble + " % " + secondNumberDouble);
+                   System.out.println("The solution is = " + moduloDouble(firstNumberDouble, secondNumberDouble));
                    break;
                case 5:
                    //
